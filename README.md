@@ -9,3 +9,11 @@ Option:
 
 Status code indicates how many certificates have expired.
 ```
+
+Go get it:
+
+```
+go get -v github.com/caiguanhao/certexpchk
+```
+
+LICENSE: MIT
