@@ -15,7 +15,7 @@ import (
 
 const YMD_HMS_FORMAT = "2006-01-02 15:04:05"
 
-func checkIfCertsExpired(certs []*x509.Certificate) (expired bool, expiredCerts []*x509.Certificate, unexpiredCerts []*x509.Certificate) {
+func checkIfCertsExpired(certs []*x509.Certificate) (expired bool, expiredCerts, unexpiredCerts []*x509.Certificate) {
 	now := time.Now()
 	for _, cert := range certs {
 		if now.Before(cert.NotAfter) && now.After(cert.NotBefore) {
